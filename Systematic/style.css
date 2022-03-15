@@ -1,0 +1,553 @@
+
+
+/*======================================= 
+Common Css
+=========================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #ddd;
+    font-family: Georgia;
+    font-size: 16px;
+    line-height: 1.5rem;
+}
+.container{
+    max-width: 960px;
+    width: 96%;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.alignleft{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.aligncenter{
+    display: block;
+    margin: 0 auto 15px;
+}
+.alignright{
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+/*==================================
+    Top Header Css
+====================================*/
+.header-area{
+    width: 100%;
+    clear: both;
+}
+#top-header-area{
+    background-color: #BA2E1F;
+    width: 100%;
+    padding: 15px 0;
+}
+.inner-top-area{
+    overflow: hidden;
+}
+.mini-menu{
+    float: left;
+    width: 70%;
+    padding-top: 5px;
+}
+.mini-menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.mini-menu ul li{
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+}
+.mini-menu ul li::after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 1px;
+    height: 16px;
+    right: -9px;
+    top: 6px;
+}
+.mini-menu ul li:last-of-type:after {
+    display: none;
+}
+.mini-menu ul li a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.mini-menu ul li a:hover{
+    color: #ddd;
+}
+.search-area{
+    float: right;
+    width: 30%;
+    overflow: hidden;
+}
+.search-area form{
+    float: right;
+    max-width: 210px;
+    width: 96%;
+    padding: 2%;
+    background-color: #fff;
+    border-radius: 25px;
+
+}
+.search-area input {
+    float: left;
+    width: 75%;
+    padding: 1%;
+    border: 0px solid #fff;
+    color: #000;
+    padding: 2% 0;
+}
+.search-area input[type="text"]:focus {
+    outline: none;
+}
+.search-area input[type="submit"]{
+    background: url(img/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 23%;
+    cursor: pointer;
+}
+
+/*==================================
+    Main Header Css
+====================================*/
+
+#main-header-area{
+    width: 100%;
+    clear: both;
+}
+.inner-header{
+    overflow: hidden;
+    padding: 40px 0;
+}
+.logo-area{
+    float: left;
+    width: 240px;
+}
+.social-area {
+    float: right;
+    max-width: 600px;
+    width: 100%;
+    padding-top: 20px;
+  }
+.social-area ul{
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+.social-area ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+.social-area ul li a{
+    display: block;
+    text-decoration: none;
+}
+.social-area ul li a {
+    display: block;
+    text-decoration: none;
+}
+.social-area ul li a .svg-inline--fa {
+    background: #000;
+    border-radius: 50%;
+    padding: 8px;
+    color: #ddd;
+  }
+.social-area ul li .svg-inline--fa:hover{
+    background: rgb(100, 28, 28);
+    color: #fff;
+}
+.social-area ul li .svg-inline--fa.fa-twitter:hover{
+    background: rgb(36, 67, 202);
+}
+.social-area ul li .svg-inline--fa.fa-linkedin-in:hover{
+    background: rgb(36, 67, 202);
+}
+.social-area ul li .svg-inline--fa.fa-pinterest:hover{
+    background: rgb(36, 67, 202);
+}
+.social-area ul li .svg-inline--fa.fa-google-plus-g:hover{
+    background: rgb(36, 67, 202);
+}
+.social-area ul li .svg-inline--fa.fa-rss:hover{
+    background: #EE802F;
+}
+
+
+
+
+
+/*==================================
+    Main Menu Css
+====================================*/
+
+#main-menu{
+    width: 100%;
+    clear: both;
+}
+.inner-menu{
+    background-color: #333333;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    min-height: 30px;
+}
+.inner-menu::after{
+    background-color: #2B2B2B;
+    position: absolute;
+    height: 50%;
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 5px 5px;
+}
+#main-menu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#main-menu ul li{
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+#main-menu ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 14px;
+}
+#main-menu ul li a:hover{
+    color: red;
+}
+#main-menu ul li:hover a{
+    color: red;
+}
+#main-menu ul li:hover ul li a{
+    color: #fff;
+}
+
+/* Dropdown Menu Css */
+
+#main-menu ul ul{
+    position: absolute;
+    top: 25px;
+    background-color: red;
+    left: -9999px;
+    width: 180px;
+}
+#main-menu ul li:hover>ul{
+    left: 0px;
+}
+#main-menu ul ul ul {
+    left: -9999px;
+    top: 0;
+  }
+#main-menu ul ul li:hover ul {
+    left: 180px;
+  }
+#main-menu ul ul li{
+    margin: 0;
+    display: block;
+    padding: 5px;
+}
+#main-menu ul ul li:hover{
+    background-color: rgb(31, 19, 19);
+    color: red;
+}
+
+
+
+
+/*==================================
+    Hero Section Css
+====================================*/
+
+#hero-section{
+    background: #fff;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+.inner-hero{
+    width: 100%;
+    overflow: hidden;
+}
+.inner-hero h2{
+    font-size: 86px;
+    font-weight: normal;
+    color: #000;
+    line-height: 1em;
+    margin-bottom: 15px;
+    margin-top: 3%;
+}
+.inner-hero p{
+    color: #666666;
+    font-size: 16px;
+}
+.inner-hero a{
+    float: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: red;
+    margin-top: 3%;
+}
+
+
+
+/*==================================
+    Work Area Section Css
+====================================*/
+
+.work-area{
+    background-color: #F2F2F2;
+}
+.inner-work-area {
+    display: flex;
+    justify-content: space-between;
+  }
+.main-child{
+    width: 32%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.inner-work-area h2{
+    padding: 10px 0;
+    font-size: 26px;
+    color: #333333;
+    font-weight: normal;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.inner-work-area .about-area{
+    text-align: center;
+}
+.inner-work-area .about-area p{
+    font-size: 14px;
+    color: #878787;
+    margin-top: 1rem;
+    text-align: left;
+}
+.inner-work-area  a{
+    text-decoration: none;
+    float: right;
+    margin-top: 1rem;
+    display: block;
+    color: red;
+    font-weight: normal;
+}
+.inner-work-area  a:hover{
+    color: #000;
+}
+.about-area  img {
+    padding: 5px;
+    background-color: #F2F2F2;
+    border: 1px solid #DFDFDF;
+  }
+
+.service-area{
+    overflow: hidden;
+}
+.service-area .child-secvice{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.service-area .child-secvice h4{
+    
+}
+.service-area .child-secvice .service-img{
+    width: 25%;
+    margin: auto;
+    display: block;
+}
+.service-area .child-secvice .service-img img{
+    margin: auto;
+    display: block;
+}
+.service-area .child-secvice .service-text{
+    width: 67%;
+}
+.service-area .child-secvice .service-text h4{
+    color: #878787;
+    font-size: 14px;
+}
+.service-area .child-secvice .service-text p{
+    color: #878787;
+    font-size: 13px;
+}
+
+.client-area{
+    color: #878787;
+    font-size: 13px;
+}
+.client-area .child-client{
+    display: block;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+.client-area .child-client a{
+    margin: 0;
+}
+.client-area .child-client h3{
+    font-size: 16px;
+    background-image: url(img/dot.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 15px 0;
+    padding-left: 60px;
+}
+.client-area .child-client span{
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+
+/*==================================
+    Footer Css
+====================================*/
+
+#footer{
+    width: 100%;
+    overflow: hidden;
+}
+.inner-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.child-footer{
+    width: 22%;
+}
+.child-footer a{
+    color: #b92d1f;
+    text-decoration: none;
+    display: block;
+}
+.child-footer p{
+    color: #666666;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.child-footer h2 {
+    font-size: 16px;
+    color: #666666;
+    padding: 15px 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-top: 4px solid #ddd;
+  }
+.child-footer:first-of-type span{
+    display: block;
+    
+}
+.child-footer ul{
+    list-style: none;
+}
+.child-footer ul li{
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    padding-left: 20px;
+    background-image: url(img/footer-ewrro.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-bottom: 3px;
+}
+.child-footer ul li a{
+    font-size: 14px;
+    color: #666666;
+}
+.child-footer ul li a:hover{
+    color: #b92d1f;
+}
+.child-footer .blog-post{
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.child-footer .blog-post h3{
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 5px;
+}
+.child-footer .blog-post h6{
+    color: #666666;
+    line-height: 1.5em;
+}
+.child-footer .blog-post a{
+    display: inline-block;
+}
+.child-footer .blog-post p{
+    margin-top: 15px;
+}
+.child-footer .blog-post .rm{
+    display: block;
+    float: right;
+    font-size: 13px;
+}
+.child-footer input{
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    padding-left: 5px;
+    background-color: #F2F2F2;
+    border: none;
+}
+.child-footer textarea{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    padding-left: 5px;
+    background-color: #F2F2F2;
+    border: none;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.child-footer button{
+    padding: 8px 15px;
+    text-transform: uppercase;
+    color: #b92d1f;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.inner-bottom-footer{
+    overflow: hidden;
+    padding: 15px;
+    background-color: #F2F2F2;
+    color: #919191;
+    font-weight: 500;
+}
+.inner-bottom-footer .left-content{
+    float: left;
+}
+.inner-bottom-footer .right-content{
+    float: right;
+}
